@@ -1,0 +1,25 @@
+@include mobile {
+    .icon {
+
+        display: block;
+        border: none;
+        background-color: color(second);
+        color: color(secondText);
+        font-size: 1.5em;
+        align-self: flex-start;
+        float: right;
+        z-index: 200;
+
+        &.-active{
+            background-color: color(primary);
+            border: none;
+        }
+
+        }
+    }
+
+@include desktop {
+    .icon {
+        display: none;
+        }
+    }

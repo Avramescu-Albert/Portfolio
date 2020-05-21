@@ -63,6 +63,11 @@ h2 {
     &.header {
         margin: 0;
         display: inline;
+        font-size: 2em;
+
+        @include mobile {
+            font-size: 1.5em;
+        }
         
         a {
             text-decoration: none;
@@ -90,9 +95,11 @@ h2 {
         text-transform: uppercase;
         align-self: center;
         margin: 0;
+        font-size: 2.5em;
 
         @include desktop {
-            font-size: 3em;
+            font-size: 4em;
+            margin: 0;
         }
     }
 }
@@ -100,10 +107,25 @@ h2 {
 p {
     &.content {
         color: color(primaryText);
+        font-size: 20px;
+
+        @include desktop {
+            font-size: 32px;
+        }
     }
 }
 
 div {
+
+    &.main-text {
+
+        margin: 0;
+        padding: 0 0.2em;
+
+        @include desktop {
+        padding: 0 3em;
+        }
+    }
 
     &.container {
 
@@ -115,9 +137,12 @@ div {
             margin: 2em 4em;
             padding: 3em 2em;
             border-radius: 20px;
+            box-shadow: 
+            -2px -2px 12px 0 rgba(0, 0, 0, 0.3),
+            1px 1px 12px 0 rgba(0, 0, 0, 0.3);
 
             @include mobile {
-                margin: 2em;
+                margin: 1.1em;
             }
 
         }
@@ -175,7 +200,7 @@ div {
         @include mobile {
             text-align: center;
             font-size: 1.5em;
-           padding: 0;
+            padding: 0;
         }
 
         a {
@@ -188,8 +213,16 @@ div {
         }
 
         li {
-            display: inline;
+
             margin: 2em;
+
+
+            @include desktop {
+                display: inline;
+                margin: 0;
+                margin-left: 2em;
+                font-size: 1.5em;
+            }
             
         }
 
@@ -216,6 +249,7 @@ div {
         color: color(primary);
         font-size: 1.3em;
         text-align: center;
+
         }
     }
 
@@ -254,7 +288,7 @@ div {
 
         display: block;
         border: none;
-        background-color: color(second);
+        background-color: #2a5d6700;
         color: color(secondText);
         font-size: 1.5em;
         align-self: flex-start;
@@ -323,7 +357,7 @@ div.menu-icon {
 
 .welcome-page {
     display: block;
-    width: 90%;
+    width: 95%;
     margin: auto;
     height: 99vh;
     text-align: center;
@@ -332,16 +366,35 @@ div.menu-icon {
     .welcome-title {
 
         h2 {
-            padding: 2em 0 0 0;
-            text-transform: uppercase;
-            font-size: 7vw;
+            font-size: 9.5em;
             margin: 0;
+            padding: 1em 0 0 0;
+
+            @include desktop {
+                
+                padding: 1.5em 0 0 0;
+                text-transform: uppercase;
+                font-size: 6.5vw;
+                margin: 0;
+            }
+        }
+
+        p{
+            font-size: 3em;
+
+            @include desktop {
+                color: color(secondText);
+                font-size: 2vw;
+                text-align: center;
+
+            }
         }
     }
 
     .contact, .welcome{
 
         display: inline;
+
         
         ul {
             padding: 0;
@@ -350,11 +403,15 @@ div.menu-icon {
                 display: inline;
                 margin: auto 1em;
                 padding: 1em;
-                background-color: black;
+                background-color: #14302e;
+                border-radius: 50px;
+                text-transform: uppercase;
+                font-weight: bold;
 
-                a {
-                    text-decoration: none;
-                    color: color(secondText);
+                @include mobile {
+                    display: block;
+                    margin: 2.5em auto;
+                    font-size: 2em;
                 }
         
                 a:hover {
@@ -362,12 +419,18 @@ div.menu-icon {
                 }
             }
 
+            a {
+                text-decoration: none;
+                color: color(secondText);
+            }
+
             li:hover {
                 background-color: #fba834;
             }
 
             i {
-                margin: 2em 1em;
+                margin: 1em 1em;
+                font-size: 1.5em;
             }
         }
 
@@ -383,6 +446,106 @@ div.menu-icon {
 
 
 }
+
+    .container {
+        margin: 1em auto;
+        width: 80%;
+        height: auto;
+
+        @include mobile {
+            width: 100%;
+        }
+        
+    }
+  
+    .project {
+        
+        border: 5px solid orange;
+        overflow: hidden;
+        margin: 2em 0;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax( 100%, auto));
+
+           
+
+        @include desktop {
+        width: 100%;
+       
+        grid-template-columns: repeat(auto-fit, minmax( 300px, auto));
+
+            
+        }
+    }
+
+    .feature-image {
+    display: block;
+    margin: auto;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    height: auto;
+    border-right: 5px solid orange;
+
+    @include mobile {
+        width: 100%;
+        border-bottom: 5px solid orange;
+    }
+  }
+  
+  
+  .project-detail {
+    display: block;
+    background-color: rgb(228, 228, 228);
+
+    h2 {
+
+        @include desktop {
+                align-self: center;
+                font-size: 2em;
+                margin-top: 10px;
+            
+        }
+        font-size: 6vw;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    p {
+        display: block;
+        font-size: 2vw;
+        margin: 1em;
+        @include mobile {
+            font-size: 4vw;
+            margin: 30px 10px;
+        }
+    }
+
+        a {
+            padding: 0.5em 3em;
+            font-size: 1.5em;
+            background-color: #fba834;
+            text-align: center;
+            align-self: flex-end;
+            border-radius: 50px;
+            text-decoration: none;
+            color: color(secondText);
+
+            @include mobile {
+                font-size: 1.2em;
+            }
+        }
+
+        .link-site {
+            text-align: center;
+            display: block;
+            margin-top: 4em;
+            @include mobile {
+            margin-bottom: 30px;
+            }
+        }
+  }
+
 
 
 

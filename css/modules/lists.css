@@ -1,0 +1,96 @@
+ul {
+
+    &.skill-list {
+        list-style-type: none;
+        margin: 0;
+    }
+ 
+    &.menu-list {
+        list-style-type: none;
+        margin: 0;
+
+        @include mobile {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: color(secondText);
+        }
+
+        a:hover {
+            text-decoration: line-through;
+        }
+
+        li {
+
+            margin: 2em;
+
+
+            @include desktop {
+                display: inline;
+                margin: 0;
+                margin-left: 2em;
+                font-size: 1.5em;
+            }
+            
+        }
+
+        li.content {
+
+            @include desktop {
+                color: color(third);
+                font-size: 1.5em;
+                margin-bottom: 5vh;
+                text-transform: uppercase;
+                }
+        }
+
+    }
+}
+
+ .current-menu-item {
+     text-decoration: line-through;
+    }
+
+ .small-text {
+
+        p {
+        color: color(primary);
+        font-size: 1.3em;
+        text-align: center;
+
+        }
+    }
+
+.bar {
+    display: block;
+    height: 2vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 1em;
+
+    span{
+        display: block;
+        height: 2vh;
+        float: left;
+        border-radius: 10px;
+        background-color: orange;
+    }
+}
+
+.about-card {
+    display: inline-block;
+    width: 350px;
+    margin-right: 15px;
+
+    @include mobile {
+        display: block;
+        width: 90%;
+        margin: auto;
+        align-self: center;
+    }
+
+}

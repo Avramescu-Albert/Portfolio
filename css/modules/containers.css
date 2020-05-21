@@ -1,0 +1,211 @@
+
+
+
+.welcome-page {
+    display: block;
+    width: 95%;
+    margin: auto;
+    height: 99vh;
+    text-align: center;
+    color: color(secondText);
+
+    .welcome-title {
+
+        h2 {
+            font-size: 9.5em;
+            margin: 0;
+            padding: 1em 0 0 0;
+
+            @include desktop {
+                
+                padding: 1.5em 0 0 0;
+                text-transform: uppercase;
+                font-size: 6.5vw;
+                margin: 0;
+            }
+        }
+
+        p{
+            font-size: 3em;
+
+            @include desktop {
+                color: color(secondText);
+                font-size: 2vw;
+                text-align: center;
+
+            }
+        }
+    }
+
+    .contact, .welcome{
+
+        display: inline;
+
+        
+        ul {
+            padding: 0;
+
+            li {
+                display: inline;
+                margin: auto 1em;
+                padding: 1em;
+                background-color: #14302e;
+                border-radius: 50px;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                @include mobile {
+                    display: block;
+                    margin: 2.5em auto;
+                    font-size: 2em;
+                }
+        
+                a:hover {
+                    text-decoration: line-through;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: color(secondText);
+            }
+
+            li:hover {
+                background-color: #fba834;
+            }
+
+            i {
+                margin: 1em 1em;
+                font-size: 1.5em;
+            }
+        }
+
+                
+        &.menu {
+            display: block;
+            width: 90%;
+            margin: 5em auto;
+            align-self: flex-end;
+        }
+
+    }
+
+
+}
+
+div.menu-icon {
+
+    .disable {
+        display: none;
+    }
+
+    @include mobile {
+
+        display: none;
+
+        &.active{ 
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: color(primary);
+            opacity: 1;
+            transition: opacity .3s, transform .3s, visibility .3s;
+            box-sizing: border-box;
+            
+
+                li {
+                    display: block;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: color(secondText);
+                }
+
+                a:hover {
+                    text-decoration: line-through;
+                }
+            }
+
+        .menu-line {
+            height: 2px;
+            border: none;
+            background-color: color(secondText);
+        }
+
+    }
+}
+
+div {
+
+    &.main-text {
+
+        margin: 0;
+        padding: 0 0.2em;
+
+        @include desktop {
+        padding: 0 3em;
+        }
+    }
+
+    &.container {
+
+        &.about-me {
+            background-color: color(secondText);
+            width: auto;
+            height: fit-content;
+            align-self: center;
+            margin: 2em 4em;
+            padding: 3em 2em;
+            border-radius: 20px;
+            box-shadow: 
+            -2px -2px 12px 0 rgba(0, 0, 0, 0.3),
+            1px 1px 12px 0 rgba(0, 0, 0, 0.3);
+
+            @include mobile {
+                margin: 2em;
+            }
+
+        }
+    }
+    
+
+    &.two-sections {
+        height: fit-content;
+        
+        @include desktop {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-areas:
+            "one two";
+        }
+    }
+
+    &.section-1 {
+        width: auto;
+        grid-area: one;
+        height: fit-content;
+        align-self: center;
+        margin: 2em;
+
+        @include desktop {
+            margin: 4em 0 0 4em;
+            align-self: flex-start;
+        }
+    }
+
+    &.section-2 {
+        @include desktop{
+            display: block;
+            width: auto;
+            margin: 4em 4em 0 0;
+            height: fit-content;
+            align-self: center;
+            text-align: right;
+            grid-area: two;
+        }
+    }
+}

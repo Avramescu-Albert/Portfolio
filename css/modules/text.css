@@ -1,0 +1,53 @@
+
+
+h2 {
+    &.header {
+        margin: 0;
+        display: inline;
+        font-size: 2em;
+        
+        a {
+            text-decoration: none;
+            color: color(secondText);
+        }
+    }
+
+    &.main-text-box {
+        color: color(primaryText);
+        text-transform: uppercase;
+        align-self: center;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 1rem;
+        font-size: 10vw;
+
+        @include desktop {
+            font-size: 4.5vw;
+        }
+
+    }
+
+    &.headline {
+        color: color(primaryText);
+        text-transform: uppercase;
+        align-self: center;
+        margin: 0;
+        font-size: 2.5em;
+
+        @include desktop {
+            font-size: 4em;
+            margin: 0;
+        }
+    }
+}
+
+p {
+    &.content {
+        color: color(primaryText);
+        font-size: 20px;
+
+        @include desktop {
+            font-size: 32px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$colors: (
+    primary: #2a5d67,
+    primary-lighter: lighten(#2a5d67, 20%),
+    second: #393E46,
+    primary-light: lighten(#707070, 40%),
+    primary-darker: darken(#707070, 20%),
+    primaryText: #393E46,
+    secondText: #F2F2F2
+    
+);
+
+@function color($color-name) {
+    @return map-get($colors , $color-name);
+}
+
+$desktop: 1000px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// Colors
+$bg-color: color(primary);
+$dot-color: color(primaryText);
+
+// Dimensions
+$dot-size: 2px;
+$dot-space: 22px;
+
+body {
+	background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+    background-size: $dot-space $dot-space;
+    margin: 0;
+    font-family: Segoe UI;
+    background-color: color(second);
+}

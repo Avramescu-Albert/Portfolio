@@ -15,6 +15,7 @@ body {
 h2.header {
   margin: 0;
   display: inline;
+  font-size: 2em;
 }
 h2.header a {
   text-decoration: none;
@@ -41,14 +42,31 @@ h2.headline {
   -ms-grid-row-align: center;
   align-self: center;
   margin: 0;
+  font-size: 2.5em;
 }
 @media (min-width: 1000px) {
   h2.headline {
-    font-size: 3em;
+    font-size: 4em;
+    margin: 0;
   }
 }
 p.content {
   color: #393E46;
+  font-size: 20px;
+}
+@media (min-width: 1000px) {
+  p.content {
+    font-size: 32px;
+  }
+}
+div.main-text {
+  margin: 0;
+  padding: 0 0.2em;
+}
+@media (min-width: 1000px) {
+  div.main-text {
+    padding: 0 3em;
+  }
 }
 div.container.about-me {
   background-color: #F2F2F2;
@@ -61,6 +79,7 @@ div.container.about-me {
   margin: 2em 4em;
   padding: 3em 2em;
   border-radius: 20px;
+  box-shadow: -2px -2px 12px 0 rgba(0, 0, 0, 0.3), 1px 1px 12px 0 rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 1000px) {
   div.container.about-me {
@@ -134,8 +153,15 @@ ul.menu-list a:hover {
   text-decoration: line-through;
 }
 ul.menu-list li {
-  display: inline;
   margin: 2em;
+}
+@media (min-width: 1000px) {
+  ul.menu-list li {
+    display: inline;
+    margin: 0;
+    margin-left: 2em;
+    font-size: 1.5em;
+  }
 }
 @media (min-width: 1000px) {
   ul.menu-list li.content {
@@ -238,17 +264,34 @@ div.menu-icon .disable {
 }
 .welcome-page {
   display: block;
-  width: 90%;
+  width: 95%;
   margin: auto;
   height: 99vh;
   text-align: center;
   color: #F2F2F2;
 }
 .welcome-page .welcome-title h2 {
-  padding: 2em 0 0 0;
-  text-transform: uppercase;
-  font-size: 7vw;
+  font-size: 9.5em;
   margin: 0;
+  padding: 1em 0 0 0;
+}
+@media (min-width: 1000px) {
+  .welcome-page .welcome-title h2 {
+    padding: 1.5em 0 0 0;
+    text-transform: uppercase;
+    font-size: 6.5vw;
+    margin: 0;
+  }
+}
+.welcome-page .welcome-title p {
+  font-size: 3em;
+}
+@media (min-width: 1000px) {
+  .welcome-page .welcome-title p {
+    color: #F2F2F2;
+    font-size: 2vw;
+    text-align: center;
+  }
 }
 .welcome-page .contact, .welcome-page .welcome {
   display: inline;
@@ -260,20 +303,31 @@ div.menu-icon .disable {
   display: inline;
   margin: auto 1em;
   padding: 1em;
-  background-color: black;
+  background-color: #14302e;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.welcome-page .contact ul li a, .welcome-page .welcome ul li a {
-  text-decoration: none;
-  color: #F2F2F2;
+@media (max-width: 1000px) {
+  .welcome-page .contact ul li, .welcome-page .welcome ul li {
+    display: block;
+    margin: 2.5em auto;
+    font-size: 2em;
+  }
 }
 .welcome-page .contact ul li a:hover, .welcome-page .welcome ul li a:hover {
   text-decoration: line-through;
+}
+.welcome-page .contact ul a, .welcome-page .welcome ul a {
+  text-decoration: none;
+  color: #F2F2F2;
 }
 .welcome-page .contact ul li:hover, .welcome-page .welcome ul li:hover {
   background-color: #fba834;
 }
 .welcome-page .contact ul i, .welcome-page .welcome ul i {
-  margin: 2em 1em;
+  margin: 1em 1em;
+  font-size: 1.5em;
 }
 .welcome-page .contact.menu, .welcome-page .welcome.menu {
   display: block;
